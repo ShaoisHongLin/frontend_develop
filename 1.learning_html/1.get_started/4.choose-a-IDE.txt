@@ -1,0 +1,10 @@
+开发需要使用一个IDE，比较推荐的是VsCode和HbuilderX，这两个都可以，但是我学习的课程中使用的是VsCode，因此我下载了VsCode
+熟悉VsCode的使用：
+
+1.拓展：下载chinese插件包。
+
+2.常规新建文件夹，或者直接从资源管理器拖拽文件夹到VsCode的目录下。
+
+3.新建index.html
+
+注：小技巧就是VsCode可以用   ! +enter快捷生成  html的骨架。

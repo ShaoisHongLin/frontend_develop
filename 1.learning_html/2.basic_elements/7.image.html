@@ -1,0 +1,31 @@
+<!--本节讲解图片标签<img>-->
+
+<!--img是单标签，不需要做闭合/-->
+
+<!--
+img有两个必要属性：
+1.src:寻址，寻找本地的图片资源
+2.alt:图片碎裂时候提供代替文本。
+
+
+其余属性：
+3.width:宽度------注意！！！ 当你的图片只设定width时候，它会等比例放缩height，如果你定死height值，图片会被拉伸变型
+4.height:高度-------尽量不要使用！！！！！！！！！会被拉伸变型，仅添加width属性时候是自适应宽与高，添加height高度定值，则图片会被拉伸
+5.title:悬停显示的图片文字描述信息。
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="路飞">
+    <img src="1.jpg" alt="路飞"  width="480px" title="Monkey-D-Luffy">
+    <img src="1.jpg" alt="路飞"  width="480px" height="420px">
+    <img src="1.jpg" alt="路飞"  width="480px" height="210px">
+</body>
+</html>

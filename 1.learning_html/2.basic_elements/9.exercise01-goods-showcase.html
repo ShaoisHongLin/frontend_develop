@@ -1,0 +1,48 @@
+<!--本次练习需要对一个小商品进行信息描述。要求上方使用图片，下方使用黑标题和两个段落介绍信息，并放在屏幕居中显示。
+
+
+    --图片--
+标题：华为p70 Pura
+
+介绍信息：
+超聚光伸缩摄像头
+8999rmb
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="huawei-pura70.jpg" alt="huawei-pura70手机" width="180px">
+    <h3>华为p70 Pura</h3>
+    <p>超聚光伸缩摄像头</p>
+    <p>8999rmb</p>
+    <!--运行结果展示后，发现了我的代码中的几个问题：
+    标题的字体，段落的文字。
+    二者都是默认在左侧对其，在其中分布不均匀，有长有短十分不美观。
+        接下来我查看了标准答案如下：
+    -->
+
+
+
+    <div style="text-align: center;">
+        <img src="huawei-pura70.jpg" alt="huawei-pura70手机" width="180px">
+        <h3>华为p70 Pura</h3>
+        <p>超聚光伸缩摄像头</p>
+        <p>8999rmb</p>
+    </div>
+    <!--解决的办法就是将这部分代码包裹了一个容器，叫做div，没什么特别的，就是将它们放置到一起-->
+    <!--<style="text-align: center;">的意思就是容器中所有内容以居中格式排布-->
+
+
+
+
+</body>
+
+</html>
