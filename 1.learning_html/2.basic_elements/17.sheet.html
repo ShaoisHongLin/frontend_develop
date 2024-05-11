@@ -1,0 +1,141 @@
+<!--本节介绍"表格"标签
+
+    它由行、列、单元格组成。同行等高，同列等宽。
+    它由<table>起始和终止，由<tr>来定义行，由<td>来定义单元格
+-->
+
+
+<!--1.<table>标签的属性：最常用的是border边线(默认边线=0)-->
+
+<table border="1"> <!--添加border后我们注意到不知有一条边线，外部的table有边线，单元格也有边线，叠在一起很不美观，后面学习css会美化它们-->
+    <tr>
+        <td>吃饭</td>
+        <td>学习</td>
+        <td>上课</td>
+        <td>睡觉</td>
+    </tr>
+    <tr>
+        <td>吃饭</td>
+        <td>学习</td>
+        <td>上课</td>
+        <td>睡觉</td>
+    </tr>
+    <tr>
+        <td>吃饭</td>
+        <td>学习</td>
+        <td>上课</td>
+        <td>睡觉</td>
+    </tr>
+    <tr>
+        <td>吃饭</td>
+        <td>学习</td>
+        <td>上课</td>
+        <td>睡觉</td>
+    </tr>
+</table>
+
+
+<!--table这么麻烦的标签当然有快捷输入：table>tr*3>td{内容}*3-->
+
+<table>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+</table>
+
+
+
+
+<!--2.另外，表格可以加名字，captain标签，加在<table>下面第一行-->
+<table border="1">
+    <caption>表名</caption>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+</table>
+
+<!--3.表格头部<thead>标签和特殊单元格<th>
+
+    这两者搭配可以组成一个特殊的表头效果，默认是黑色的加粗效果表示表头。
+-->
+
+<table border="1">
+    <caption>学生表</caption>
+    <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+    </thead>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+</table>
+
+
+<!--4.<tbody>表格身体<tfoot>表格脚部
+        
+    样式上没有什么实际改动，只是你可以将表格的前面的内容称之为身体，并用tbody包裹，最后一行称为脚部，用tfoot包裹
+    -->
+<table border="1">
+    <caption>学生表</caption>
+    <thead>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>单元格</td>
+        <td>单元格</td>
+        <td>单元格</td>
+    </tr>
+    </tfoot>
+</table>

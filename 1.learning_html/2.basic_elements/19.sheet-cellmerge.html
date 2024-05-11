@@ -1,0 +1,57 @@
+<!--本节讲解表格中的单元格合并-->
+
+
+
+
+<!--单元格合并是前面没讲到的<td>标签的属性
+1.colspan="n"，column span，跨越"列"合并，即把n个列捏在一起。
+
+2.rowspan"n", row span，跨越"行"合并，即把n个行捏在一起。
+
+
+注：合并单元格，要在你想合并的目标区域的最左上方的td进行动手。
+注：合并单元格之后，要将被合并的其它部分的td直接删除。
+-------否则的后果：
+被改动的单元格变大，下一个单元格扔存在而不是消失，多出一个单元格被挤出表格，但又不会完全出去，会挤压剩余部分。
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" border="1" width="500px" height="420px" cellspacing="0">
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td >单元格</td>
+            <td>单元格</td>
+            <td colspan="2" rowspan="2" align="center">单元格2x2大小</td>
+            <!--这行被删掉了-->
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <!--这两行被删掉了-->
+            <!--这两行被删掉了-->
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+</body>
+</html>

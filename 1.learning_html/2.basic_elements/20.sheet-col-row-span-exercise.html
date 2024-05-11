@@ -1,0 +1,38 @@
+<!--对表格进行一个小练习。
+3x3的表格，使得用长方合并围绕一周，留下最中间一个方格，类似万花筒的形状。如下形状...体会即可
+
+u  u  i
+m  o  i
+m  s  s
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" align="center" cellspacing="0" width="480px" height="420px">
+        <tr> 
+            <td colspan="2"></td>
+           <!--弄掉-->
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <!--弄掉-->
+        </tr>
+        <tr>
+            <!--弄掉-->
+            <td colspan="2"></td>
+            <!--弄掉-->
+        </tr>
+    </table>
+    
+</body>
+</html>

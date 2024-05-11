@@ -1,0 +1,89 @@
+<!--无序列表：无序列表不单单是排版文本，无序列表和最常使用的导航栏等都离不开干系，虽然大部分是横向的，但代码里而是无序列表，只是使用了css进行样式排列-->
+
+
+
+<!--属性type：
+    disc实心圆、circle空心圆、square小方块、none不显示-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>第一行文字</li>
+        <li>第二行文字</li>
+    </ul>
+
+
+    <ul type="none">
+        <li>第一行文字</li>
+        <li>第二行文字</li>
+        <li>第三行文字</li>
+    </ul>
+
+    <ul type="circle">
+        <li>第一行文字</li>
+        <li>第二行文字</li>
+        <li>第三行文字</li>
+    </ul>
+
+    <ul type="square">
+        <li>第一行文字</li>
+        <li>第二行文字</li>
+        <li>第三行文字</li>
+    </ul>
+
+    <ul type="disc">
+        <li>第一行文字</li>
+        <li>第二行文字</li>
+        <li>第三行文字</li>
+    </ul>
+
+    <!--跟有序列表一样，无序列表自身也可以嵌套-->
+    <ul>
+        <li>第一行文字</li>
+        <li>
+            <ul>
+                <li>内部第一行</li>
+                <li>内部第二行</li>
+                <li>内部第三行</li>
+            </ul>
+        </li>
+        <li>第三行文字</li>
+    </ul>
+
+    <!--注：快速生成无序列表的方式：ul>li可以提高效率-->
+    <!--注：快速生成无序列表的方式：ul>li可以提高效率-->
+    <!--注：快速生成无序列表的方式：ul>li可以提高效率-->
+    
+    <ul>
+        <li>手机</li>
+        <li>平板</li>
+        <li>手表</li>
+        <li>电视</li>
+        <li>电脑</li>
+    </ul>
+
+
+    
+
+    <!--练习导航栏部分：后续添加css就可以实现导航栏效果，一般具有跳转功能-->
+    <!--注：快速生成无序列表带超链接和div的方式：ul>li>a[href=#]可以提高效率-->
+    <!--注：快速生成无序列表带超链接和div的方式：ul>li>a[href=#]可以提高效率-->
+    <!--注：快速生成无序列表带超链接和div的方式：ul>li>a[href=#]可以提高效率-->
+
+    <ul>
+        <li><a href="#">手机</a></li>
+        <li><a href="#">平板</a></li>
+        <li><a href="#">手表</a></li>
+        <li><a href="#">电视</a></li>
+        <li><a href="#">电脑</a></li>
+    </ul>
+</body>
+
+</html>

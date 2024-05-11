@@ -1,0 +1,177 @@
+<!--
+    本节详细介绍<table>标签的几个属性，在会表格的基本使用之后，让表格尽可能美观。
+分别对<table>、<tr>、<td>这三者都有自身的属性可以添加。
+
+1.针对<table>的属性
+    （一）、border,表格的边框（包含了单元格的边框)。
+    （二）、width，表格的宽度
+    （三）、height，表格的高度
+    （四）、align，表格水平方向的对齐方式
+    （五）、cellpadding,cell表示单元格，padding英文表示"填充"。即对于每个cell视作载体，它内部的内容物与它的外侧之间的距离。
+在图中则表现为，文字(内容物)距离单元格(载体)越来越远了。
+
+
+    （六）、cellspacing,cell表示单元格，spacing英文表示"间距",即对于每个cell的外边线之间的距离。
+在图中则表现为，单元格与单元格之间由紧挨着变得越来越远了。
+
+注意：cellspacing如果设定为0，那么单元格之间将密不可分，会变得更加美观。
+    （七）、bgcolor，表格的背景颜色
+    （八）、bordercolor，边线的颜色
+    （九）、background，背景图片。
+
+
+
+
+
+2.针对<tr>的属性
+    （一）、height，一行的高度。
+    （二）、bgcolor，一行的背景颜色。
+    （三）、background，一行的背景颜色。
+    （四）、align，一行的(内容)水平对齐方式，left center right。视觉效果来看就是内容在单元格中：左、居中、右
+    （五）、V align，(vertical align)的缩写，一行垂直方向的对齐方式，top middle bottom。视觉效果来看就是内容在单元格中：上，居中，下。
+
+
+
+3.针对<td>的属性
+    （一）、height，单元格的高度。
+    （二）、width，单元格的宽度。
+    （三）、bgcolor，单元格的背景颜色。
+    （四）、background，单元格的背景颜色。
+    （五）、align，单元格的(内容)水平对齐方式，left center right。视觉效果来看就是内容在单元格中：左、居中、右
+    （六）、V align，(vertical align)的缩写，单元格垂直方向的对齐方式，top middle bottom。视觉效果来看就是内容在单元格中：上，居中，下。
+
+
+    -------1.要注意的是对于<td>仍然存在同列等宽，同行等高，因此对一个td施加高度、宽度变化时候，整个列/行会随之改变。
+    -------2.由于整体的table宽高不变，如果规定td的高度和宽度，那么剩余的部分大概会被拉长或者压缩。
+    (七)、colspan和rowspan单元格合并属性，下节讲。
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" width="500px" height="500px" align="center" cellpadding="50px" cellspacing="10px" bgcolor="orange" bordercolor="blue"
+    background="1.jpg">
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+
+
+
+    <table border="1" align="center" width="480px" height="400px">
+        <tr height="100px" background="初音未来.jpg">
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr bgcolor="orange">
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr align="center">
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr valign="top" align="right">   <!--这样就被现实在了右上角-->
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+
+    </table>
+
+
+
+    <table border="1" align="left" width="480px" height="400px">
+        <tr>
+            <td width="200px">单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td align="right" valign="bottom"  bgcolor="lightblue">单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr> 
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+
+    </table>
+
+
+    <table border="1" cellspacing="0">   <!--展示一下cellspacing设置成0的美观效果-->
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+        <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
