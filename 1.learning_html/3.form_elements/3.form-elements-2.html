@@ -1,0 +1,104 @@
+<!--form的表单元素-->
+
+
+<!--上个笔记末尾讲解了单选框
+
+示例： <input typoe="radio" name="" value="">
+
+-->
+
+<!--1."type=checkbox"，它给用户设定多选题来收集数据-->
+<!--注:跟radio单选框是一样的，checkbox和radio都依靠name属性来识别同一组数据，name属性很重要，不可或缺-->
+
+
+
+
+
+<!--2."type=file"文件上传按钮，它给用户弹出窗口浏览本地文件进行上传文件-->
+<!--
+        示例：
+        <input type="file"  name="img">
+
+        它的效果是产生一个获取本地文件的按钮效果，以及右侧会显示的获取到的文件名。
+-->
+
+
+
+<!--3."type=submit"提交按钮，它给用户对于整个表单信息的提交确定
+
+-->
+
+<!-- 
+        示例：
+        <input type="submit" value="提交">
+-->
+
+<!--4."type=reset"重置按钮，它为整个表单的内容清楚可供用户重新填写
+
+
+-->
+<!--
+        示例：
+        <input type="reset" value="重置">
+        谨慎使用重置按钮，如果用户不小心触碰到了会很恼火，可以不添加该按钮，除非刻意需求。
+-->
+
+
+
+<!--5.button按钮，<button></button>.
+    解释：没有任何功能的按钮,它在任何地方都可以成为一个按钮，不是表单元素，跟表单的按钮很类似，所以放到一起讲解。-->
+
+
+<!--6."type=image"图片按钮，它将一个特定的图片作为按钮，适合一些比较奇特风格的动画按钮效果。-->
+
+<!--
+        示例：
+        <input type="image" src="1.jpg">
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        吃饭<input type="checkbox" name="hobby" value="1">
+        打球<input type="checkbox" name="hobby" value="2">
+        喝酒<input type="checkbox" name="hobby" value="3">
+        睡觉<input type="checkbox" name="hobby" value="4">
+
+    </form>
+
+
+    <form action="">
+        <input type="file" name="666">
+    </form>
+
+
+    <form action="">
+        吃饭<input type="checkbox" name="hobby" value="1">
+        打球<input type="checkbox" name="hobby" value="2">
+        喝酒<input type="checkbox" name="hobby" value="3">
+        睡觉<input type="checkbox" name="hobby" value="4">
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <button>按钮6</button>
+
+    <form action="">
+        <input type="image" src="anime-button.png" >
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!--form表单可以说是整个html里面最为重要的部分：每个有用户的输入需求，采集用户的输入数据，就需要form表单-->
+
+<!--表单<form>标签
+    由"容器"和"控件"组成，
+1.什么是表单容器
+<form> </form>这对标签就是表单容器
+
+2.解释下什么叫做控控件：控件就是
+
+输入框、复选框、按钮等等，这些都是控件的例子。
+
+
+3.介绍表单的属性：
+(一)、action="url"，所使用的服务器的地址。
+(二)、method="get/post",get或者post代表了两种表单提交到后台后端的提交方式，叫get请求和post请求。
+get方式的提交内容在url里面可以看见，较不安全。
+    get请求方式常用于内容较少的请求。
+post方式提交的内容在url里面看不见，过程加密，较为安全。
+    post请求方式更适合内容较多的请求。
+
+注：method的get和post在后面会在后端中详细学习不需要先了解过多
+(三)、name属性，用于表单的名称。
+
+
+这些属性看起来都暂时没有用处，因为没有跟后端内容链接起来，要先了解熟悉。
+
+
+
+4.介绍控件：(一般也泛称为表单里的任何内容，都叫做表单元素)
+
+(一)、<input>，不用闭合，单独的标签就可以使用。
+
+<input标签>的属性：
+
+1.type属性：text文本输入框、submit提交按钮
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post" name="biaodan">
+
+    </form>
+
+    <form action="">
+        <input type="text">   
+    </form>
+</body>
+
+</html>

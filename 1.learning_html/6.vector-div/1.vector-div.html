@@ -1,0 +1,158 @@
+<!--div容器，是十分重要的，在前面也见过几次-->
+
+
+
+<!--
+    div标签是什么？
+        1.div是容器，
+            ----解释容器的概念：容器，是是用来规定"分区"或"节，division/section。
+        2.div将文档分为独立的各个部分，通过div将不同的分区区分开。
+        3.div是块级元素
+        4.总之：div是布局的，是用来布局的，每个区域的容器！！！！！
+-->
+
+<!--
+    常见网站的布局方式：（可以用来练习本次第一次的页面布局）
+
+1.头部--------------------------------
+2.导航栏------------------------------
+3.(左)主要内容----4.(右)网站右侧模块-----
+
+
+5.页面底部------------------------------
+-->
+
+
+<!--用div进行初次布局时候，最好为div添加一个class属性，如：<div class="container"></div>
+    
+    对class这个属性的用途解释：
+    
+    我们习惯将最大的，最宏观的布局，最外层的那部分div，用class，起名为"container"，
+    如：起名为container（最宏观的、外层整个网页界面的长方形）、header（页面头部）、navigator(导航栏)、footer(页面脚部)，起这些class名，都是为了，方便地和css进行配合。
+    因为，如果你只使用一堆div进行布局，打开网页看不见任何内容，因此初次布局时候，用<div class="">和简单的css加上基础底色和拉伸效果才能可视化你的布局。
+
+    
+
+
+    step1：先布局把div的并列和嵌套关系写好，虽然它们未添加css之前仍是按垂直排列。
+
+    注：如果页面这个区域直接占一整行，直接用并列关系的div就可以布局，
+        如果这个区域是那种"一行左、中、右",类似这种，分为多个区域，你要先将它们最外层的区域先划分出来，
+    里面再用嵌套的方式并列排布内容、
+        
+    示例：
+            <div class="container">
+                <div class="header">网站头部</div>
+                <div class="nav">网站导航栏</div>
+                <div class="main">主要内容
+                    <div class="left">1左侧内容部分</div>
+                    <div class="right">2右侧边栏</div>
+                </div>
+                <div class="footer">页面脚部</div>
+            </div>
+
+    step2.添加css样式来使你的div嵌套关系按你所想，拉伸，增加底色，可视化。
+            
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+        
+    </head>
+
+
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--解释css的内容：
+    对于contaniner：
+        {
+            1.width是宽度，
+            2.margin：设置为auto是为了让width不刚好满足设备屏幕宽度时候，剩余部分"自适应",左右平分屏幕剩余大部分尺寸，让它尽量占据屏幕。
+                --margin的-1表示内容居左，0表示居中，1表示居右。
+
+                注：margin:0 auto;对于最外面的container写这个属性就够了，内部被嵌套的子容器们，都会受到影响。
+            3.background-color背景颜色
+
+        }
+    对于其它的内部区域：
+         {
+            1.height:div的高度。
+            2.background-color。
+            3.margin-top：10px，该div的最上方，距离上一个div底部，设定一定距离，此处设定为10px;
+                ---目的是使得相邻的上下两个容器间产生缝隙。
+        }
+   对于再为细分的区域，左侧栏 右侧栏：
+        {
+            1.float: left;浮动到左侧。
+            2.width: 900px;
+            3.height:400px;
+            4.background-color:orange;
+        }
+-->
+    <style>
+
+        .container{
+            width:1400px;  
+            margin: 0 auto;
+            background-color:lightblue;
+        }
+        .header{
+            height: 80px;
+            background-color:orange;
+        }
+
+        .nav{
+            margin-top: 10px;
+            height: 80px;
+            background-color:orange;
+        }
+
+        .main{
+            margin-top: 10px;
+            height: 400px;   
+        }
+        
+        .left{
+            float: left;
+            width: 900px;
+            height:400px;
+            background-color:orange;
+        }
+        .right{
+            float: right;
+            width:480px;
+            height:400px;
+            background-color:orange;
+        }
+        .footer{
+            margin-top: 10px;
+            height:80px;
+            background-color: orange;
+        }
+    </style>
+    <!--注：不要忘写main，只写里面的左和右了，尤其是main的height，要保持和内部的一致。-->
+</head>
+<body>
+    <div class="container">
+        <div class="header">网站头部</div>
+        <div class="nav">网站导航栏</div>
+        <div class="main">
+            <div class="left">1左侧内容部分</div>
+            <div class="right">2右侧边栏</div>
+        </div>
+        <div class="footer">页面脚部</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!--form的表单元素-->
+
+
+
+<!--1.先来回顾上一节介绍的文本输入框type=text和submit-->
+
+    <!--注：一个form表单内的表单元素练习时候换行需要<br>-->
+
+<!--2.介绍type="password"密码框，密码会被遮挡，区别于文本框-->
+
+
+
+<!--3.介绍type="radio"单选框，以name属性设定为一组数据，用户可以在几个选项中选择一个作为value值提交该组数据。
+
+示例：
+   男<input type="radio" name="sex" value="男">
+   女<input type="radio" name="sex" value="女">
+
+
+   注：当type="radio"时候，一定要存在name属性，name属性相同的作为一组radio单选框，只能同时选中其中一个选项，其中的value用于代表实际值。
+
+科普：为什么采用radio："收音机"这个单词作为单选框呢？
+因为老式的收音机，上面有一排可以按压下的按钮，任何时候都只能按下一个按钮，如果你按下了另一个按钮，那么其它下压按钮会弹起，每时每刻只有一个按钮被下压。
+这很符合单选框的特性。
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        username<input type="text" name="username">
+        <br>      
+        adddress<input type="text" name="address">
+    </form>
+    <!--提示词放在input type="text"前面，醒目-->
+
+
+
+    <form>
+        password <input type="password" name="password">
+    </form>
+
+    <form action="">
+        男<input type="radio" name="sex" value="1">
+        女<input type="radio" name="sex" value="0">
+    </form>
+
+</body>
+
+</html>

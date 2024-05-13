@@ -1,0 +1,202 @@
+<!--本节对html的form的内容进行一个实操，采用表格进行一个比较规范的布局，实现一个小的信息收集框-->
+
+
+
+<!--本节要求实现一个较为规范死板的小表格，用于基本信息的收集，要求使用单元格的方式来进行布局，合理采用组件并完成它。
+
+    注：不要使用"rowspan的跨行合并"来形成某一更高的高度的单行的效果，对一个tr的每个td增添rowspan="2"的属性，
+    因为它可能会导致下一整行tr为空，合并效果丢失的混乱。
+   
+   
+   注：本节根本不需要合并列或修改单元格高度或者宽度，只需将对单元格的
+   width（影响一整列）
+   height（影响一整行）
+   设置较符合的像素值即可。
+
+   我自己写的错误案例片段，以示警戒:
+        <table>
+            <tr>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+
+    -->
+<!--
+    任务样例在img里给出。
+-->
+
+
+
+<!--step1：先进行整体的布局，对着这一块内容设定table的基本方块来搁置单元格的内容,如先建立出跟图片案例一样的6*4单元格。
+适当进行横向合并，设置宽高，再增添内容。
+-->
+
+<!--step2.先在tr属性添加align=center，或者默认的left，来让文字不会混乱，接着添加文字部分。-->
+
+<!--step3.推荐先为各个单元格设置宽高，以免文字使其变型压缩整个表,要注意的是
+    对于<td>增加的width和height属性的多个单元格影响。
+    width（影响一整列）
+    height（影响一整行）-->
+
+
+<!--step4.添加文字部分-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="exercise-task01.png" alt="任务样例">
+    <table border="2" cellspacing="0" align="center" width="600px" height="420px">
+        <tr align="center">
+            <td colspan="4" width="120px" height="70px">教员搜索</td>
+        </tr>
+        <tr align="left">
+            <td width="120px" height="75px">搜索类型</td>
+            <td width="220px">
+                <form action="">
+                    <select>
+                            <option value="0">搜索教员信息</option>
+                        <optgroup label="1组">
+                            <option value="张三">张三</option>
+                            <option value="李四">李四</option>
+                            <option value="王五">王五</option>
+                        </optgroup>
+
+                        <optgroup label="2组">
+                            <option value="大明">大明</option>
+                            <option value="小明">小明</option>
+                            <option value="李明">李明</option>
+                        </optgroup>
+
+                        <optgroup label="3组">
+                            <option value="王亮">王亮</option>
+                            <option value="小红">小红</option>
+                            <option value="徐杰">徐杰</option>
+                        </optgroup>
+                    </select>
+                </form>
+            </td>
+            <td width="125px">教员身份</td>
+            <td>
+                <form action="">
+                    <select name="" id="">
+                        <option value="0">不限</option>
+                        <optgroup label="1组">
+                            <option value="张三">张三</option>
+                            <option value="李四">李四</option>
+                            <option value="王五">王五</option>
+                        </optgroup>
+
+                        <optgroup label="2组">
+                            <option value="大明">大明</option>
+                            <option value="小明">小明</option>
+                            <option value="李明">李明</option>
+                        </optgroup>
+
+                        <optgroup label="3组">
+                            <option value="王亮">王亮</option>
+                            <option value="小红">小红</option>
+                            <option value="徐杰">徐杰</option>
+                        </optgroup>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr align="left">
+            <td width="120px" height="125px">所在地区</td>
+            <td>
+                <form action="">
+                    <select>
+                            <option value="0">不限</option>
+                        <optgroup label="1组">
+                            <option value="张三">张三</option>
+                            <option value="李四">李四</option>
+                            <option value="王五">王五</option>
+                        </optgroup>
+
+                        <optgroup label="2组">
+                            <option value="大明">大明</option>
+                            <option value="小明">小明</option>
+                            <option value="李明">李明</option>
+                        </optgroup>
+
+                        <optgroup label="3组">
+                            <option value="王亮">王亮</option>
+                            <option value="小红">小红</option>
+                            <option value="徐杰">徐杰</option>
+                        </optgroup>
+                    </select>
+                </form>
+            </td>
+            <td width="120px">性别</td>
+            <td>
+                <form action="">
+                    <input type="radio" name="sex" value="男">男
+                    <br>
+                    <input type="radio" name="sex" value="女">女
+                </form>
+            </td>
+        </tr>
+        <tr align="left">
+            <td width="120px" height="70px">学习科目</td>
+            <td colspan="3">
+                <form action="">
+                    <select>
+                            <option value="0">请在以下列表中选择</option>
+                        <optgroup label="1组">
+                            <option value="张三">张三</option>
+                            <option value="李四">李四</option>
+                            <option value="王五">王五</option>
+                        </optgroup>
+
+                        <optgroup label="2组">
+                            <option value="大明">大明</option>
+                            <option value="小明">小明</option>
+                            <option value="李明">李明</option>
+                        </optgroup>
+
+                        <optgroup label="3组">
+                            <option value="王亮">王亮</option>
+                            <option value="小红">小红</option>
+                            <option value="徐杰">徐杰</option>
+                        </optgroup>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr align="left">
+            <td width="120px" height="70px">学习</td>
+            <td colspan="3" >
+                <form action="">
+                    <input type="text" placeholder="请输入要学习的内容">
+                </form>
+            </td>
+        </tr>
+        <tr align="left">
+            <td width="120px" height="70px">专业</td>
+            <td colspan="3">
+                <form action="">
+                    <input type="search" placeholder="请输入要学习的内容">
+                    <input type="submit" value="搜索">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+
+
+<!--成功实现了利用比较规矩的表格进行内部内容的布局，我们也可以将表格的边线去除，将整个表格去掉，做出一个12tr*2td的左侧提示文本，右侧收集内容的条条框框的任务，理解原理上可以这么做皆可-->

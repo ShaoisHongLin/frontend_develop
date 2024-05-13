@@ -1,0 +1,136 @@
+<!--最常用的表单form的type属性已经了解了，可以先回顾一下：
+
+type属性：
+    1.text
+    2.password
+    3.radio
+    4.checkbox
+    5.file
+    6.submit
+    7.reset
+    8.button
+    9.image
+-->
+
+
+
+
+<!--接下来要讲解更多的form表单的非利用type直接使用的控件，它们扔有很多很多种-->
+
+
+
+<!--1.介绍第一个控件：<select>  </select>下拉列表。
+
+<select>  </select>这对标签，表示的是使用倒三角点击，产生几行数据来供你选择导入到输入框，适合选项很多需要用户浏览找到对应选项的场景。
+
+具体使用：
+(一).在<select></select>标签内部还要写很多对的<option></option>标签，它们用于提供下拉框的可供选择内容。
+
+(二).<option>不仅内部要设置实际输入的value，更要用一对<option>夹住实际显示给用户的文字信息：
+        示例：
+    <form action="">
+        <select>
+            <option value="0">请选择省份</option>
+            <option value="上海">上海</option>
+            <option value="浙江">浙江</option>
+            <option value="辽宁">辽宁</option>
+            <option value="山东">山东</option>
+        </select>
+    </form>
+
+(三).除了<option>标签，你还可以使用<opt group>，使几个<option>归为一个小分组。
+
+    注：小组的optgroup的标题要用label属性，如：label="娱乐",但是这个label作为小组标题不能被选择，
+    不能被作为数据提交，只是划分几个常用选项到几个小组。
+        示例:
+          <form action="">
+        <select>
+            <option value="0">请选择省份</option>
+            <optgroup>
+                <option value="上海">上海</option>
+                <option value="浙江">浙江</option>
+            </optgroup>
+            <optgroup>
+                <option value="辽宁">辽宁</option>
+                <option value="山东">山东</option>
+            </optgroup>
+        </select>
+    </form>
+
+
+(四).多行文本框：<textarea>标签，
+
+    使用场景：用户提交的反馈信息，或者大量文本的收集，则使用<textarea>文本框，文本区域可容纳无限数量的文本。
+        示例：直接打出textarea默认生成的。
+
+    <form action="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+    注:其实<textarea>标签也可以放在任意位置使用，它并不是form表单中的专有元素，只不过与form的相关性很强。
+
+
+
+
+(五).<label>标签,专门为input标签做标注，不会向用户提供直观的视觉效果，
+    但是当用户的鼠标点击label标签时候，会触发该label所关联标记的input标签，让浏览器的焦点从其它处转移到被标记的标签。
+
+
+    
+    另外，label标签的，标记方法是利用<input>标签的方式是内置的for元素，如：<label for="username">，这对应了某个input的id属性。
+
+        示例：
+          <form action="">
+            <label for="username">用户名username</label>
+            <input type="text" id="username">
+        </form>
+        
+    注：它的好处是可以改进用户的体验。
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <select>
+            <option value="0">请选择省份</option>
+            <option value="上海">上海</option>
+            <option value="浙江">浙江</option>
+            <option value="辽宁">辽宁</option>
+            <option value="山东">山东</option>
+        </select>
+    </form>
+
+
+    <form action="">
+        <select>
+            <option value="0">请选择省份</option>
+            <optgroup  label="江浙沪">
+                <option value="江苏">江苏</option>
+                <option value="浙江">浙江</option>
+                <option value="上海">上海</option>
+            </optgroup>
+            <optgroup label="东三省">
+                <option value="辽宁">辽宁</option>
+                <option value="吉林">吉林</option>
+                <option value="黑龙江">黑龙江</option>
+            </optgroup>
+        </select>
+    </form>
+
+
+        <textarea name="" id="" cols="30" rows="10"></textarea>   <!--textarea并不是form的专有控件，只是相关性较强-->
+
+
+        <form action="">
+            <label for="username">用户名username</label>
+            <input type="text" id="username">
+        </form>
+</body>
+
+</html>

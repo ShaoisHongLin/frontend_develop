@@ -1,0 +1,90 @@
+<!--2014HTML5出世之前，我们使用div+css来布局，但是这种布局的文档结构不清晰，而且不利于爬虫引擎爬取
+为了解决上述缺点，2014的HTML5增加了几个语义标签。
+-->
+
+<!--比较：上节我们使用，形如：
+    <div class="container">、<div class="header">、<div class="header">、<div class="nav">、<div class="main">、
+        <div class="left">、<div class="right">、<div class="footer">.
+
+            这些雷同度较高，放眼望去密密麻麻的div以及内部的class或者id的(自己起名的)部分，很难找到对应的容器。
+    
+-->
+
+<!--而html5中提供的新标签是：
+    1.<header></header>        头部
+    2.<nav></nav>              导航栏
+    3.<section></section>      区域块，泛指作为集中的零碎内容。
+    4.<aside></aside>          侧边栏
+    5.<footer></footer>
+    6.<article></article>      独立完整的一条内容，比如博客的评论区的一条评论块。
+
+    以新版的标签这种方式书写，更符合语义,增强代码布局方面的可读性。
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1400px;  
+            margin: 0 auto;
+            background-color:lightblue;
+        }
+
+        header {
+            height: 80px;
+            background-color: orange;
+        }
+
+
+        nav{
+            margin-top: 10px;
+            height: 80px;
+            background-color:orange;
+        }
+
+        .main{
+            margin-top: 10px;
+            height: 400px;   
+        }
+        
+        section {
+            float: left;
+            width: 900px;
+            height:400px;
+            background-color:orange;
+        }
+        aside {
+            float: right;
+            width:480px;
+            height:400px;
+            background-color:orange;
+        }
+        footer{
+            margin-top: 10px;
+            height:80px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <header>页面头部</header>
+        <nav>导航栏</nav>
+        <!--行内并列仍要外套一个div-->
+        <div class="main">
+            <section>内容区域块</section>
+            <aside>侧边栏</aside>
+        </div>
+
+        <footer>页面底部</footer>
+    </div>
+</body>
+
+</html>

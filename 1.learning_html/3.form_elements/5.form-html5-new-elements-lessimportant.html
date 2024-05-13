@@ -1,0 +1,132 @@
+<!--1.总结一下之前学习了的html的非新增的type属性内容和form的一些控件知识
+
+
+1.type属性：
+    1.text
+    2.password
+    3.radio
+    4.checkbox
+    5.file
+    6.submit
+    7.reset
+    8.image：后接src=""
+        9.<button> (非专有)
+
+
+
+2.控件：
+    form专有的：
+    1.<select>：内含标签<option   value="">
+            和<optgroup label="">
+    2.<textarea>
+    3.<label>后接for=""
+-->
+
+
+<!--Type属性html5新增属性
+    
+(一)、email专用输入框，判断是否符合email格式。
+    示例：
+    <form action="">
+        请输入email<input type="email" name="email">
+    </form>
+
+(二)、url专用输入框，判断是否符合url地址格式。
+    示例：
+     <form action="">
+        请输入url<input type="url">
+    </form>
+(三)、search，搜索框，带有清除功能。
+    示例：
+       <form action="">
+        搜索框<input type="search" name="search">
+        <input type="submit">
+    </form>
+(四)、tel，电话输入框。（使用较少）
+    示例：
+     <form action="">
+        电话号<input type="tel" name="tel">
+    </form>
+(五)、color,颜色拾取器。一般要配合一个<submit>放在末尾提交
+    示例：
+    <form action="">
+        拾取颜色<input type="color" name="color">
+    </form>
+(六)、number，并设定min和max，提供一个用上下箭头控制增减的数字输入框，一般也要配合一个<submit>放在末尾用于提交。
+    示例：
+    
+    <form action="">
+        请选择一个数字1-10<input type="number" name="number" max="10" min="1">
+        <input type="submit">
+    </form>
+
+(七)、range，定义一个非精确数值的滚动条(slider),用于不精确数值的提供，一般要配合一个<submit>放在末尾用于提交。
+
+    注：除了max，min，还可以value设置默认值。
+    示例：
+     <form action="">
+        <input type="range" name="range" max="10" min="1">
+        <input type="submit">
+    </form>
+
+    注：实际使用中，可能仍旧是使用css来一点点完成这个滚动条效果，因为html5自带的基本不美观。
+
+(八)、date，提供日期，用于选取年月日。可能在特定场合经常使用。
+        示例：
+      month,是date的变体，形式是2024-02，没有具体日子，只截取到月份。
+      week，是date的变体，形式是2024第51周，也没有具体月日，只有第n周。
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        请输入email<input type="email" name="email">
+    </form>
+
+
+    <form action="">
+        请输入url<input type="url" name="url">
+    </form>
+
+    <form action="">
+        搜索框<input type="search" name="search">
+        <input type="submit">
+    </form>
+
+
+    <form action="">
+        电话号<input type="tel" name="tel">
+    </form>
+
+    <form action="">
+        选择你喜欢的颜色:<input type="color" name="color">
+        <input type="submit">
+    </form>
+
+
+    <form action="">
+        请选择一个数字1-10:<input type="number" name="number" max="10" min="1">
+        <input type="submit">
+    </form>
+
+    <form action="">
+        <input type="range" name="range" max="10" min="1" value="5">
+        <input type="submit">
+    </form>
+
+    <form action="">
+        生日:<input type="date" name="birthday">
+        <input type="submit">
+    </form>
+    <form action="">
+        生日所在月:<input type="month" name="birthday">
+        <input type="submit">
+    </form>
+</body>
+</html>

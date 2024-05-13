@@ -1,0 +1,73 @@
+<!--不同于html5中新增的input中的type属性，直接作用于input的属性，本节介绍几个十分重要的属性-->
+
+
+<!--1.HTML5中，input的autofocus属性
+    
+    应用场景：一般对于一个页面最重要的部分，往往让它默认获取焦点，比如百度的搜索框在页面默认常亮的。
+    再对比如慕课网的搜索框，往往焦点到它身上才会变亮。
+
+    示例：
+    <form action="">
+        username: <input type="text" autofocus>
+        <input type="submit">
+    </form>
+
+
+
+    2.HTML5中，input的placeholder属性
+
+    应用场景：作为输入框内的默认灰色字体，提示你该输入的内容，或者是希望你输入的信息提示等。
+
+    值得一提的是，有了这个placeholder，我们就不需要"丑陋地"，在文本框前面以文本的形式，提示用户这个框框是用于输入什么消息了。
+    可以去掉文字框前面的内容，转而使用placeholder的极简主义。
+    
+    示例：
+    
+    <form action="">
+        <input type="text" placeholder="请输入中文账户名">
+        <br>
+        <input type="password" placeholder="请输入你的密码">
+        <br>
+        <input type="submit">
+    </form>
+
+
+    3.HTML5中，input的required属性
+
+    应用场景：一般的文本框即使空内容也可提交数据，但是注明required则是必要信息，如果空提交则会显示提示你补全它的信息---"！请填写此字段"。
+
+    示例：
+    <form action="">
+        <input type="text" placeholder="姓名(必填项目)" required>
+        <input type="submit">
+    </form>
+
+    提示：----------"！请填写此字段"
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        username: <input type="text" autofocus>
+        <input type="submit">
+    </form>
+
+    <form action="">
+        <input type="text" placeholder="请输入中文账户名">
+        <br>
+        <input type="password" placeholder="请输入你的密码">
+        <br>
+        <input type="submit">
+    </form>
+
+    <form action="">
+        <input type="text" placeholder="姓名(必填项目)" required>
+        <input type="submit">
+    </form>
+</body>
+</html>

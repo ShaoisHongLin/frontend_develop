@@ -1,0 +1,65 @@
+<!--早古的浏览器播放视频要下载flash插件，有的人小时候看动画经常要求你在浏览器更新flash，但是当HTML5的推出，已经支持html自身的音、视频功能了-->
+
+
+<!--1.介绍<video>标签以及src和controls(视频控制器)两个属性-->
+
+<!--video还有其它详细的属性：
+    1.src="文件"
+    2.controls
+    3.autoplay，默认自动播放,但是浏览器有保护行为，需要你配合muted使用。
+    4.muted，默认静音
+    5.loop，默认循环播放
+    6.preload，加载页面时候优先加载该资源，适合如视频网站，视频过多适合，优先加载特定的资源。
+    7.height尽量不要使用height，会使得视频内容被扭曲，只修改width会自适应视频的尺寸。
+    8.width，尽量多修改width而不要动height。
+    9.poster，播放前海报封面
+-->
+
+
+
+<!--2.<audio>音频标签，属性有src controls
+    loop、muted、preload、autoplay。不再解释。    
+-->
+
+
+
+<!--3.<source src="">标签
+
+<source src="">标签是一个特殊的存在，它可以移除外面播放器标签内的src属性，替代它，放置在video和audio的标签嵌套在内部，用于提供多种解码源保证文件可以被播放。
+
+        示例：（如ogg、mp3等各种音频模式都可以解码成功）
+        <audio controls loop >
+        <source src="baby.ogg">
+        </audio>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video 
+        src="uzi_penshui.mp4" 
+        controls
+        posterpreload
+        loop
+        autoplay
+        muted
+        poster="dragon-poster.jpg"
+        width="480px">
+    </video>
+
+    <audio 
+    src="baby.ogg"
+     controls
+     loop
+     preload>
+    </audio>
+
+    <audio controls loop >
+        <source src="baby.ogg">
+    </audio>
+</body>
+</html>
